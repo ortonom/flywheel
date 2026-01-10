@@ -3,5 +3,5 @@
 One-liner to paste into any new project:
 
 ```
-Read github.com/ortonom/flywheel and set it up here: add reference to CLAUDE.md, create flywheel.md for rolling context, install the stop hook to ~/.claude/.
+Read github.com/ortonom/flywheel and set it up here: add reference to CLAUDE.md, create flywheel.md for rolling context, install the stop hook to ~/.claude/. Commit, push, and create the PR yourself with gh pr create.
 ```
