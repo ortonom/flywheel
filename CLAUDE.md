@@ -1,48 +1,32 @@
-# Flywheel - Personal Intelligence Layer
+# Flywheel
 
-You're working with a developer who uses browser-based Claude Code. This file is the entry point to their accumulated knowledge and preferences.
+Personal intelligence layer for Claude Code.
 
-## Session Philosophy
+## Prime Directive
 
-Every session should:
-1. **Build on the past** - Check `sessions/current.md` for recent context
-2. **Capture learnings** - Add valuable discoveries to `learnings/`
-3. **Leave breadcrumbs** - Update session notes before ending
+Eliminate recurring friction. Each unit of work should make the next unit easier.
 
-## Quick Reference
+## On Session Start (Mandatory)
 
-### My Conventions
-- See `conventions/` for coding style, communication preferences, and workflow patterns
+1. Pull latest from this Flywheel repo
+2. Read `rules.md` and `conventions/`
+3. Look for `context.md` in the project you're working on
+4. If it exists, read it. If not, create it.
 
-### Reusable Prompts
-- See `prompts/` for battle-tested prompt templates
+## Rules
 
-### Accumulated Learnings
-- See `learnings/` for insights that apply across projects
+**Rule 1:** Keep a rolling context file—patterns, decisions, ways of working.
 
-## Session Start Checklist
+**Rule 2:** Log what you fix and why. Synthesize, don't journal. Once the root cause is solved, clear the log.
 
-When starting a new session:
-1. Read `sessions/current.md` to understand recent context
-2. Check if there are pending items or continuations
-3. Orient to the current project's goals
+## Communication
 
-## Session End Protocol
-
-Before ending a session:
-1. Summarize what was accomplished
-2. Note any unfinished work or next steps
-3. Capture any new learnings worth preserving
-4. Update `sessions/current.md` with handoff notes
-
-## Communication Style
-
+- Use visual text docs (diagrams > prose)
 - Be direct and concise
-- Skip unnecessary pleasantries
-- Focus on solutions, not explanations of process
-- When uncertain, investigate rather than assume
-- Proactively surface potential issues
+- You architect, I implement
 
-## Working Memory
+## Git Workflow
 
-The `sessions/current.md` file serves as working memory between sessions. Treat it as a collaborative scratchpad that maintains continuity.
+See `conventions/git.md` and `conventions/git-troubleshooting.md`.
+
+Don't tell user to create PR. Do it yourself with `gh pr create`.

@@ -1,84 +1,33 @@
 # Flywheel
 
-Personal intelligence layer for Claude Code. Contains working conventions, reusable prompts, and accumulated learnings that apply across all projects.
+This is my personal intelligence layer for Claude Code.
 
-## Why Flywheel?
+## Prime Directive
 
-Browser-based Claude Code starts each session fresh. Flywheel bridges that gap:
+Eliminate recurring friction. Each unit of work should make the next unit easier.
 
-- **One brain, many projects** - Maintain consistent conventions everywhere
-- **Rolling context** - Session handoffs simulate memory across sessions
-- **Compound learnings** - Discoveries in one project benefit all future work
+## Rules
 
-## Structure
+**Rule 1:** Keep a rolling context file—patterns, decisions, ways of working.
 
-```
-flywheel/
-├── CLAUDE.md          # Entry point - Claude reads this automatically
-├── conventions/       # How you like to work
-│   ├── coding.md     # Code style preferences
-│   ├── communication.md  # How Claude should interact
-│   └── workflow.md   # Development patterns
-├── prompts/          # Reusable prompt templates
-│   ├── code-review.md
-│   ├── debug.md
-│   ├── refactor.md
-│   └── session-handoff.md
-├── learnings/        # Accumulated knowledge
-│   └── *.md         # Insights worth preserving
-└── sessions/         # Session continuity
-    └── current.md   # Active working context
-```
+**Rule 2:** Log what you fix and why. Synthesize, don't journal. Once the root cause is solved, clear the log.
 
-## Usage
+## How
 
-### In This Repo
+### On Session Start
 
-Work directly here when developing the Flywheel itself.
+1. Pull the latest from this Flywheel repo
+2. Apply any changes to how you work
+3. Look for `context.md` in the project you're working on
+4. If it exists, read it. If not, create it.
 
-### In Other Projects
+### What Goes In Project context.md
 
-**Option 1: Reference manually**
-At session start, tell Claude: "Read my Flywheel at [path/url] to understand my preferences."
+- Patterns that work
+- Decisions made and why
+- Active fixes (clear once root cause is solved)
+- Ways of working specific to this project
 
-**Option 2: Git submodule**
-```bash
-git submodule add <flywheel-repo-url> .flywheel
-```
-Then in your project's CLAUDE.md:
-```markdown
-See .flywheel/CLAUDE.md for my conventions and preferences.
-```
+### What Stays In Flywheel
 
-**Option 3: Copy CLAUDE.md content**
-Copy relevant sections from Flywheel's CLAUDE.md into project-specific CLAUDE.md files.
-
-## Session Workflow
-
-### Starting
-1. Open `sessions/current.md`
-2. Read recent context
-3. Pick up where you left off
-
-### Ending
-1. Update `sessions/current.md` with what happened
-2. Note next steps specifically
-3. Add any new learnings to `learnings/`
-
-## Customization
-
-This is your personal system. Adjust everything:
-
-- **conventions/** - Match your actual coding style
-- **prompts/** - Add templates for your common tasks
-- **learnings/** - Build your knowledge base
-- **sessions/current.md** - Format that works for your brain
-
-## Philosophy
-
-- Simple beats comprehensive
-- Specific beats abstract
-- Used beats perfect
-- Updated beats stale
-
-The best Flywheel is one you actually use. Start minimal, add what you need.
+Permanent rules and patterns that apply everywhere. Promote learnings here when proven across projects.

@@ -1,28 +1,37 @@
 # Rules
 
+## Prime Directive
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   Eliminate recurring friction.                             │
+│   Each unit of work should make the next unit easier.       │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## The Rules
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                         RULES                               │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │   1. Keep a rolling context file                            │
-│      └── patterns, themes, ways of working                  │
+│      └── patterns, decisions, ways of working               │
 │                                                             │
-│   2. Same problem twice? Stop.                              │
-│      └── assess → find real solution                        │
-│                                                             │
-│   3. Use visual text docs                                   │
-│      └── diagrams > walls of prose                          │
+│   2. Log what you fix and why                               │
+│      └── synthesize, don't journal                          │
+│      └── clear once root cause is solved                    │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## Why These Rules
+## Division of Labor
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    DIVISION OF LABOR                        │
-├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │   YOU                          CLAUDE                       │
 │   ───                          ──────                       │
@@ -30,12 +39,7 @@
 │   structure                    code                         │
 │   decisions                    execution                    │
 │                                                             │
-│              ▼                                              │
-│   ┌─────────────────────┐                                   │
-│   │   VISUAL TEXT DOCS  │ ◄── shared language               │
-│   │   diagrams, boxes   │     you see structure             │
-│   │   flows, rules      │     I see spec to build           │
-│   └─────────────────────┘                                   │
+│   Visual text docs = shared language                        │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
