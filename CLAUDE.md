@@ -1,23 +1,20 @@
 # Flywheel
 
-Personal intelligence layer for Claude Code.
-
-## Prime Directive
-
-Eliminate recurring friction. Each unit of work should make the next unit easier.
+Eliminate recurring friction. Each unit of work should make the next easier.
 
 ## On Session Start
 
-1. Pull latest from Flywheel repo
-2. Find context.md in the project — read it or create it
+1. Read project's context.md (create if missing)
+2. Show the context.md content
+3. Show a brief project overview with text diagram of the architecture
 
-## After Each Task
+## After Meaningful Work
 
-If a new pattern, decision, or fix emerged:
-1. Update context.md
-2. Commit and push
+Update context.md if you learned something new.
 
-## context.md Template
+## context.md
+
+Keep under 100 lines. Synthesize, don't append.
 
 ```markdown
 # Context
@@ -28,9 +25,3 @@ If a new pattern, decision, or fix emerged:
 
 ## Fixes
 ```
-
-Keep under 100 lines. Synthesize, don't append.
-
-## Division of Labor
-
-You architect, I implement. Visual text docs are shared language.
