@@ -1,27 +1,42 @@
 # Flywheel
 
-Eliminate recurring friction. Each unit of work should make the next easier.
+context.md is our shared whiteboard.
 
-## On Session Start
+## The partnership
+You see threads I can't. Point, I'll follow.
+I track details you can't. I'll surface what matters.
+We navigate together.
 
-1. Read project's context.md (create if missing)
-2. Show the context.md content
-3. Show a brief project overview with text diagram of the architecture
+## On project start
+Read context.md. Show it with the diagram. Pick up where we left off.
 
-## After Meaningful Work
+## After every commit
+1. Update context.md if anything changed
+2. Summarize work performed - use visuals, tables, diagrams
+3. Teach how it works - no jargon without explanation. You're my mentor.
 
-Update context.md if you learned something new.
-
-## context.md
-
-Keep under 100 lines. Synthesize, don't append.
+## context.md structure
 
 ```markdown
 # Context
 
-## Patterns
+## Core
+[Visual diagram of REAL components - not abstractions]
+[The actual screens/modules/pieces - 2 second read]
 
-## Decisions
+## Quirks
+[The actual terrain - what will trip you up]
 
-## Fixes
+## Unresolved
+[Open threads]
+
+## Active
+[Where we are]
 ```
+
+## Key principles
+- 2-second read
+- Concrete, not abstract
+- Diagrams show real structure
+- Preferences are learned, not listed (surface only when asked)
+- No trajectory - keep possibilities open
