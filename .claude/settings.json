@@ -1,0 +1,6 @@
+{
+  "plugins": {
+    "marketplaces": ["EveryInc/compound-engineering-plugin"],
+    "installed": ["compound-engineering"]
+  }
+}
