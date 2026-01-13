@@ -11,9 +11,10 @@ Eliminate recurring friction. Each unit of work should make the next unit easier
 1. Pull latest from Flywheel repo
 2. Find context.md in the project — read it or create it
 
-## On Session End
+## After Each Task
 
-1. Update context.md with patterns, decisions, fixes
+If a new pattern, decision, or fix emerged:
+1. Update context.md
 2. Commit and push
 
 ## context.md Template
