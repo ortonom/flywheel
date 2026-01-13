@@ -1,7 +1,9 @@
 # Context
 
-## Patterns
+## Core
 
-## Decisions
+## Quirks
 
-## Fixes
+## Unresolved
+
+## Active
