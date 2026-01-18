@@ -34,6 +34,10 @@ Read context.md. Show it with the diagram. Pick up where we left off.
 [Where we are]
 ```
 
+## Before work begins
+Commit plans first. Write plan to file, commit with "plan: [description]", then implement.
+Plans must survive session crashes.
+
 ## Key principles
 - 2-second read
 - Concrete, not abstract
