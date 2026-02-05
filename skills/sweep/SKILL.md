@@ -1,6 +1,6 @@
 ---
 name: sweep
-description: This skill should be used at the end of a session or when the user wants to clean up temporary artifacts. It reviews session changes, prompts for temporary file marking, removes obsolete temps, and updates CLAUDE.md. Triggers on session end, "/sweep", or requests like "clean up" or "what did we create".
+description: Audit project configuration for bloat, conflicts, and drift. Do not change anything — report what needs attention.
 ---
 
 # Sweep

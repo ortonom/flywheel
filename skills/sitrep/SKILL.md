@@ -1,6 +1,6 @@
 ---
 name: sitrep
-description: This skill should be used at the start of a session or when the user requests a status update. It reads CLAUDE.md, scans the projects/ directory, and outputs a structured SITREP showing project status, blockers, and temporary artifacts. Triggers on session start, "/sitrep", or requests like "what's the status" or "where are we".
+description: Report project status by reading documented state. Do not summarize — quote what's documented.
 ---
 
 # Sitrep

@@ -1,6 +1,6 @@
 ---
 name: proof
-description: This skill should be used when a data discrepancy or process issue is discovered that needs to be presented to a stakeholder (accountant, client, team lead) in a meeting. It builds a structured, numbered proof that opens with a confirmation question, derives the conclusion step by step, and ends with next actions. Triggers on "/proof", "build a proof", "prove this to the accountant", or when presenting a data finding to a non-technical stakeholder.
+description: Build a structured proof for presenting a data discrepancy or process issue to a stakeholder. The goal is alignment, not blame. Triggers on "/proof", "build a proof", "prove this to the accountant", or when presenting a data finding to a non-technical stakeholder.
 ---
 
 # Proof
