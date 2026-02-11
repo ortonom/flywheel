@@ -2,6 +2,36 @@
 
 Version-controlled backup and sync hub for AI agent configuration. One repo, two agents, single source of truth.
 
+```
+                          ┌─────────────────────────┐
+                          │   ~/.claude/CLAUDE.md    │
+                          │   (source of truth)      │
+                          └────────┬────────┬────────┘
+                                   │        │
+                      ┌────────────┘        └────────────┐
+                      ▼                                  ▼
+           ┌─────────────────────┐            ┌─────────────────────┐
+           │  ~/.codex/AGENTS.md │            │  ~/flywheel/        │
+           │  (inlined copy for  │            │  (git-tracked       │
+           │   Codex to read)    │            │   backup)           │
+           └─────────┬───────────┘            └─────────────────────┘
+                     │
+          ┌──────────┴──────────┐
+          ▼                     ▼
+   ┌─────────────┐     ┌──────────────┐
+   │ Codex CLI   │     │ Claude Code  │◄── reads ~/.claude/ directly
+   │ brainstorm  │     │ implement    │
+   │ + plan ONLY │     │ + deploy     │
+   └──────┬──────┘     └──────┬───────┘
+          │                   │
+          └───────┬───────────┘
+                  ▼
+        ┌──────────────────┐
+        │  ./CLAUDE.md     │  ◄── project-level rules
+        │  (per-repo)      │      read by BOTH agents
+        └──────────────────┘
+```
+
 ## Why This Exists
 
 Claude Code and OpenAI Codex run in parallel on the same projects. Their instruction files live in dot-directories (`~/.claude/`, `~/.codex/`) that aren't git-tracked. If an agent overwrites or corrupts an instruction file, it's gone.
