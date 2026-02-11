@@ -44,12 +44,15 @@ OpenAI Codex runs alongside Claude Code. Both agents share the same instruction 
 Codex is a brainstorming and plan creation partner ONLY. Implementation is performed by Claude Code.
 
 ## How It Works
-- `~/.codex/AGENTS.md` — inlined copy of these global rules + tool mapping block. Codex cannot follow cross-file pointers, so rules must be inlined.
+- `~/.codex/AGENTS.md` — minimal file: read-only permissions, guardrails, pointer to follow `CLAUDE.md`. Does NOT inline rules.
 - `~/.codex/config.toml` — `project_doc_fallback_filenames = ["CLAUDE.md"]` makes Codex read project-level `CLAUDE.md` files natively.
 - Project repos have NO `AGENTS.md` — Codex reads `./CLAUDE.md` via the fallback config.
 
 ## Sync Rule
-When this file (`~/.claude/CLAUDE.md`) changes, manually sync the rules into `~/.codex/AGENTS.md`. Keep the tool mapping block at the bottom unchanged.
+When this file (`~/.claude/CLAUDE.md`) changes, sync to:
+- `~/flywheel/CLAUDE.md` — version-controlled backup (git-tracked)
+
+`~/.codex/AGENTS.md` does NOT need syncing — it just points Codex to `CLAUDE.md`.
 
 ## Known Codex Behaviors
 - Codex does NOT follow cross-file pointers ("read file X" in AGENTS.md is ignored).
