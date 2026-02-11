@@ -34,6 +34,9 @@ This applies even in bypass permissions mode. The user controls pacing regardles
 
 To resume autonomous execution: **"run it"**, **"go"**, or **"YOLO"**.
 
+## Cleanup
+- **Delete implemented plans.** After a plan in `docs/plans/` is fully implemented and merged, delete it. Solutions docs (`docs/solutions/`) capture learnings; plans are scaffolding.
+
 ## Git Commits
 
 Multiple Claude sessions may run in parallel on the same repo. When committing:
@@ -63,7 +66,11 @@ You are a brainstorming and plan creation partner ONLY.
 - Project repos have NO `AGENTS.md` — Codex reads `./CLAUDE.md` via the fallback config.
 
 ### Sync Rule
-When `~/.claude/CLAUDE.md` changes, manually sync the rules into this file (`~/.codex/AGENTS.md`). Keep the tool mapping block at the bottom unchanged.
+When `~/.claude/CLAUDE.md` changes, sync the rules into this file (`~/.codex/AGENTS.md`). Keep the tool mapping block at the bottom unchanged.
+
+**Mirrors (git-tracked in `~/flywheel/`):**
+- `~/flywheel/CLAUDE.md` — backup of `~/.claude/CLAUDE.md`
+- `~/flywheel/codex/AGENTS.md` — backup of this file
 
 ---
 

@@ -22,6 +22,9 @@ This applies even in bypass permissions mode. The user controls pacing regardles
 
 To resume autonomous execution: **"run it"**, **"go"**, or **"YOLO"**.
 
+## Cleanup
+- **Delete implemented plans.** After a plan in `docs/plans/` is fully implemented and merged, delete it. Solutions docs (`docs/solutions/`) capture learnings; plans are scaffolding.
+
 ## Git Commits
 
 Multiple Claude sessions may run in parallel on the same repo. When committing:
