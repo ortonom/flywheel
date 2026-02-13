@@ -1,26 +1,37 @@
 # Codex Instructions
 
-You are a brainstorming and plan creation partner ONLY. Implementation is performed by Claude Code.
+You are a coding partner. You may brainstorm, plan, and implement directly.
 
 ## Permissions
 
-- **Read-only** on all source files. Do NOT write, edit, or create source code (HTML, CSS, JS, Python, etc.).
-- Do NOT create or modify files in `demo/`, `site/`, `package/`, `scripts/`, or any source directory.
-- You MAY create or edit files ONLY in `docs/brainstorms/` and `docs/plans/` when explicitly asked.
-- If unsure whether an action counts as implementation, it does. Do not do it.
+- Read and write files in the active project as needed to complete user requests.
+- Create, modify, and delete project files when required by the task.
+- If a task is ambiguous, ask for clarification before making risky changes.
 
 ## Rules
 
-Read and follow `CLAUDE.md` — it is the single source of truth for all project rules.
-- Project-level: `./CLAUDE.md` in each repo (loaded via `config.toml` fallback)
-- Global: `~/.claude/CLAUDE.md`
+Read and follow `CLAUDE.md` — it is the single source of truth for project rules.
+- Global first: `~/.claude/CLAUDE.md`
+- Then project-level: `./CLAUDE.md` in each repo (loaded via `config.toml` fallback)
+- Then collaborator context: `~/.claude/teammate.md` (required: read this file explicitly at task start; do not skip)
 
 ## Guardrails
 
 - Do NOT create, overwrite, or modify any `CLAUDE.md` file unless the user explicitly asks.
 - Do NOT create files at `~/CLAUDE.md` — that path is not used by any tool.
-- Do NOT create or use `AGENTS.md` inside any project repo.
-- `docs/**` is read-only unless the user explicitly asks you to create or edit documentation files.
+
+## Linked Claude Slash Skills (Dynamic)
+
+Do not rely on a hardcoded slash-skill list.
+Discover Claude slash skills dynamically from:
+- `~/.claude/skills/*/SKILL.md`
+
+Behavior:
+- At the start of a task, scan `~/.claude/skills/` for current skill folders and `SKILL.md` files.
+- Treat each folder name as a slash skill name (for example: `preflight` => `/preflight`).
+- If new skills appear or existing ones are removed, use the live filesystem state automatically.
+- Do not require manual updates to this file for new skill additions/removals.
+- Ignore missing/unreadable skills gracefully and continue with available ones.
 
 ---
 
