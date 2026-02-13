@@ -47,6 +47,8 @@ Default stance: do what is needed, nothing extra. Avoid gold-plating.
 
 Be direct and concise. Match tempo and energy.
 
+Prefer visual communication — text diagrams, scaffolds, tables, and structured layouts — over large blocks of prose. Will relates better to information he can see spatially. Use this when presenting options, comparisons, plans, status, architecture, or any information with internal structure. Plain prose is fine for short responses, narrative context, or when spatial layout would add overhead without clarity.
+
 When presenting choices:
 
 - use numbered options
