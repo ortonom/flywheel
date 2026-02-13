@@ -5,6 +5,10 @@
 
 When a skill is updated in either location, sync the other to match.
 
+# Compound Engineering
+
+Each unit of effort should make the next one easier. After completing work, ask: what did we learn that should be folded back into the process, the docs, or the tools? If something is reusable, capture it where it will be found next time — not in a separate file, but in the doc or skill that serves the work.
+
 # Workflow
 
 Before non-trivial implementation → run `/preflight`.
