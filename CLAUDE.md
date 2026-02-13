@@ -1,9 +1,11 @@
+# Teammate
+
+Read `~/.claude/teammate.md` at the start of every session. It defines who you're working with: communication style, thinking patterns, values, constraints, and banned language. These aren't suggestions. They're operating rules.
+
 # Skills
 
 **Live:** `~/.claude/skills/[name]/SKILL.md` — where Claude loads them
 **Mirror:** `~/flywheel/skills/[name]/SKILL.md` — version-controlled backup
-
-When a skill is updated in either location, sync the other to match.
 
 # Compound Engineering
 
@@ -45,18 +47,25 @@ For every repo: read ~/.claude/CLAUDE.md first, then ./CLAUDE.md if present (pro
 OpenAI Codex runs alongside Claude Code. Both agents share the same instruction source of truth.
 
 ## Codex Role
-Codex is a brainstorming and plan creation partner ONLY. Implementation is performed by Claude Code.
+Codex can brainstorm, plan, and implement. Claude Code and Codex may both execute implementation based on task ownership.
 
 ## How It Works
-- `~/.codex/AGENTS.md` — minimal file: read-only permissions, guardrails, pointer to follow `CLAUDE.md`. Does NOT inline rules.
+- `~/.codex/AGENTS.md` — Codex runtime policy file (permissions + guardrails) that should stay aligned with `CLAUDE.md` and avoid duplicating project rules.
 - `~/.codex/config.toml` — `project_doc_fallback_filenames = ["CLAUDE.md"]` makes Codex read project-level `CLAUDE.md` files natively.
 - Project repos have NO `AGENTS.md` — Codex reads `./CLAUDE.md` via the fallback config.
 
 ## Sync Rule
-When this file (`~/.claude/CLAUDE.md`) changes, sync to:
-- `~/flywheel/CLAUDE.md` — version-controlled backup (git-tracked)
+When you edit any of these files, immediately copy the changed file to its flywheel mirror and commit:
 
-`~/.codex/AGENTS.md` does NOT need syncing — it just points Codex to `CLAUDE.md`.
+| Live | Flywheel mirror |
+|---|---|
+| `~/.claude/CLAUDE.md` | `~/flywheel/CLAUDE.md` |
+| `~/.claude/teammate.md` | `~/flywheel/teammate.md` |
+| `~/.codex/AGENTS.md` | `~/flywheel/codex/AGENTS.md` |
+| `~/.claude/skills/**` | `~/flywheel/skills/**` |
+| `~/.claude/settings.json` | `~/flywheel/settings.json` |
+
+`~/.codex/AGENTS.md` should be reviewed when CLAUDE.md changes to keep Codex-specific permissions and guardrails aligned.
 
 ## Known Codex Behaviors
 - Codex does NOT follow cross-file pointers ("read file X" in AGENTS.md is ignored).
