@@ -38,13 +38,13 @@ Ask and answer each question. Be honest.
 
 **Concerning if No**: How will correctness be verified?
 
-### 3. Are requirements clear or assumed?
+### 3. Is the user outcome locked?
 
-**Clear**: Requirements are documented or explicitly stated by the user.
+**Clear**: The user has stated what the outcome should be (e.g., "The user should understand X in Y seconds"). Requirements include what to do, what not to do, and how to know it's done.
 
-**Assumed**: Requirements are inferred or guessed.
+**Vague**: Requirements are inferred, or the request uses broad terms like "improve" or "clean up" without explicit scope or acceptance criteria.
 
-**Concerning if Assumed**: Assumptions may be wrong. Clarify before building.
+**Concerning if Vague**: Broad prompts cause scope drift. Don't build until the outcome is explicit and scoped.
 
 ## Workflow
 
@@ -64,7 +64,7 @@ Format:
 PREFLIGHT CHECK
 1. Reproducible outputs? [Yes/No] — [brief evidence]
 2. Verified test data? [Yes/No] — [brief evidence]
-3. Requirements clear? [Clear/Assumed] — [brief evidence]
+3. User outcome locked? [Clear/Vague] — [brief evidence]
 
 [READY TO PROCEED or STOP — CLARIFY FIRST]
 ```
@@ -89,7 +89,7 @@ Do not proceed with implementation until clarified.
 PREFLIGHT CHECK
 1. Reproducible outputs? Yes — lib/ has 119 passing tests
 2. Verified test data? Yes — verification/golden/ contains December report
-3. Requirements clear? Clear — CLAUDE.md documents fee structure
+3. User outcome locked? Clear — "fee allocation matches December golden report"
 
 READY TO PROCEED
 ```
@@ -99,7 +99,7 @@ READY TO PROCEED
 PREFLIGHT CHECK
 1. Reproducible outputs? No — no tests for allocation logic
 2. Verified test data? Yes — golden data exists
-3. Requirements clear? Assumed — penalty redistribution rules unclear
+3. User outcome locked? Vague — "improve allocation" has no do/don't/acceptance
 
 STOP — CLARIFY FIRST
 

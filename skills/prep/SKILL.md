@@ -164,3 +164,5 @@ Deliver the valuable final product — a report answering the goal.
 - **Simulate before executing.** Catch flawed plans before wasting effort.
 - **Acknowledge what works.** Strengths section is not optional.
 - **Surface misalignment early.** Don't audit the wrong thing.
+- **Role boundary.** The user defines intent and acceptance criteria. Claude executes within those constraints. Don't make product decisions during implementation.
+- **Product orientation.** Every artifact must trace to a specific deliverable. If it doesn't help ship something, fold the knowledge into the doc that serves the work or don't create it.

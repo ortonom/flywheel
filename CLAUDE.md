@@ -22,6 +22,14 @@ This applies even in bypass permissions mode. The user controls pacing regardles
 
 To resume autonomous execution: **"run it"**, **"go"**, or **"YOLO"**.
 
+## Working Principles
+
+- **One objective per change.** Don't mix behavior, style, and architecture in one edit. Checkpoint after each stable improvement so any bad idea can be reverted without losing good work.
+
+Other principles live in the skills that enforce them:
+- Intent before implementation, scope every request → `/preflight`
+- Role boundary, product orientation → `/prep`
+
 ## Cleanup
 - **Delete implemented plans.** After a plan in `docs/plans/` is fully implemented and merged, delete it. Solutions docs (`docs/solutions/`) capture learnings; plans are scaffolding.
 
