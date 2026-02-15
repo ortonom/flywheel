@@ -20,6 +20,19 @@ Read and follow `CLAUDE.md` — it is the single source of truth for project rul
 - Do NOT create, overwrite, or modify any `CLAUDE.md` file unless the user explicitly asks.
 - Do NOT create files at `~/CLAUDE.md` — that path is not used by any tool.
 
+
+## Hostify API Write Block (Global Hardening)
+
+Hostify credentials are full-privilege. Treat Hostify as read-only across all repos.
+
+- Allowed: `GET` requests to Hostify APIs.
+- Forbidden: any Hostify `POST`, `PUT`, `PATCH`, or `DELETE` request.
+- Forbidden via any transport/client: `curl`, `wget`, `fetch`, `requests`, `Net::HTTP`, SDKs, scripts, or generated code.
+- Forbidden write indicators with Hostify domains include (not exhaustive): `-X POST|PUT|PATCH|DELETE`, `--request`, `-d`, `--data`, `--data-binary`, `--post-data`, `--post-file`.
+- On any user request to perform a Hostify write: refuse and provide a safe read-only alternative.
+
+This rule is intentionally duplicated at global and repo policy layers to reduce drift risk.
+
 ## Linked Claude Slash Skills (Dynamic)
 
 Do not rely on a hardcoded slash-skill list.
